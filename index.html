@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>InformacjaMS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Witamy na stronie InformacjaMS!</h1>
+  <p>To jest Twoja strona główna hostowana na GitHub Pages.</p>
+
+  <!-- Tutaj dodaj przycisk -->
+  <button id="downloadBtn">Pobierz plik RAR</button>
+
+  <script src="script.js"></script>
+
+  <!-- A tu dodaj ten mały skrypt do pobierania -->
+  <script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      const fileUrl = 'Tymbark-Testowa.rar'; // upewnij się, że nazwa pliku jest taka sama jak na GitHub (bez spacji)
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = 'Tymbark-Testowa.rar';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+  </script>
+</body>
+</html>
+
